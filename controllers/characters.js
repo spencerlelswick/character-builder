@@ -15,10 +15,11 @@ function newChar(req, res) {
   res.render('characters/new', { title: "" })
 }
 
-function create(req, res) {
+async function create(req, res) {
   const charData = { ...req.body };
+  const createdChar = await Character.create(charData)
   try {
-    console.log(charData)
+    console.log(createdChar)
     res.redirect('/characters/')
   } catch (err) {
     console.log(err)

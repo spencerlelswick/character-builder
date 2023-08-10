@@ -95,3 +95,34 @@
 //     proficiency: ['staffs', 'wands']
 //   },
 // }
+
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const charSchema = new Schema({
+  name: {
+    type: String,
+  },
+  race: {
+    type: String,
+    enum: ['elf', 'orc', 'dwarf'],
+  },
+  charClass: {
+    type: String,
+    enum: ['warrior', 'sorcerer', 'ranger'],
+  },
+  stats: {
+    strength: Number,
+    dexterity: Number,
+    constitution: Number,
+    intelligence: Number,
+    wisdom: Number,
+    charisma: Number,
+  }
+}, {
+  timestamps: true
+});
+
+
+module.exports = mongoose.model('Character', charSchema);
