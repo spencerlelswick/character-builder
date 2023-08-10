@@ -1,5 +1,4 @@
 const Character = require("../models/character")
-const { render } = require("ejs");
 
 module.exports = {
   index,
@@ -7,8 +6,15 @@ module.exports = {
   create
 }
 
-function index(req, res) {
-  res.render('characters/index', { title: "" })
+async function index(req, res) {
+  try {
+    const characters = await Character.find({})
+    console.log(characters)
+    res.render('characters/index', { title: "", characters: characters })
+  } catch (error) {
+    console.log(err.message)
+    res.redirect('/')
+  }
 }
 
 function newChar(req, res) {
@@ -17,10 +23,9 @@ function newChar(req, res) {
 
 async function create(req, res) {
   const charData = { ...req.body };
-  const createdChar = await Character.create(charData)
+  await Character.create(charData)
   try {
-    console.log(createdChar)
-    res.redirect('/characters/')
+    res.redirect('/characters')
   } catch (err) {
     console.log(err)
     res.render("characters/new", { title: 'Create a character', errorMsg: err.message })

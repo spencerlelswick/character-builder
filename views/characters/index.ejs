@@ -4,9 +4,15 @@
   </p>
 
   <div id="createArea">
-    <div>
-      <a class="charBtn" href="characters/new">+</a>
-    </div>
+    <% characters.forEach(char=> { %>
+      <div>
+        <h2><%- char.name %></h2>
+        <p><%- char.race %> <%- char.charClass %></p>
+      </div>
+      <% }) %>
+        <a class="charBtn" href="characters/new">+</a>
   </div>
+
+
 
   <%- include('../partials/footer.ejs') %>
