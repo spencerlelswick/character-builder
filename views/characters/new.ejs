@@ -4,5 +4,31 @@
   </p>
     
 
+  <form action="/characters" method="POST">
+    <label> name
+      <input type="string" name="name"  placeholder="Character name" required>
+    </label>
+
+    <label> Class
+      <select name="charClass" required>
+        <option value="warrior">warrior</option>
+        <option value="ranger">ranger</option>
+        <option value="sorcerer">sorcerer</option>
+      </select>
+    </label>
+
+    <label> Race
+      <select name="charRace" required>
+        <option value="elf">elf</option>
+        <option value="dwarf">dwarf</option>
+        <option value="orc">orc</option>
+      </select>
+    </label>
+  
+    <button type="submit">CREATE</button>
+  </form>
+
+
+
 
   <%- include('../partials/footer.ejs') %>

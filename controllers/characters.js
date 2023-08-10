@@ -3,7 +3,8 @@ const { render } = require("ejs");
 
 module.exports = {
     index,
-    new: newChar
+    new: newChar,
+    create
 }
 
 function index (req,res){
@@ -12,4 +13,8 @@ function index (req,res){
 
 function newChar(req,res){
     res.render('characters/new', {title: ""})
+}
+
+function create(req,res){
+    res.redirect('/characters')
 }

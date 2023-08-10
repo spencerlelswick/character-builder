@@ -31,7 +31,7 @@ const Races = {
       charisma: 0,
     }
   },
-  halforc: {
+  orc: {
     name: 'halforc',
     bonus: {
       strength: 2,
@@ -42,15 +42,15 @@ const Races = {
       charisma: 0,
     }
   },
-  human: {
-    name: 'human',
+  dwarf: {
+    name: 'dwarf',
     bonus: {
-      strength: 1,
-      dexterity: 1,
-      constitution: 1,
-      intelligence: 1,
-      wisdom: 1,
-      charisma: 1,
+      strength: 0,
+      dexterity: 0,
+      constitution: 2,
+      intelligence: 0,
+      wisdom: 0,
+      charisma: 0,
     }
   },
 
