@@ -112,14 +112,13 @@ const charSchema = new Schema({
     type: String,
     enum: ['warrior', 'sorcerer', 'ranger'],
   },
-  stats: {
-    strength: Number,
-    dexterity: Number,
-    constitution: Number,
-    intelligence: Number,
-    wisdom: Number,
-    charisma: Number,
-  }
+  strength: {type: Number},
+  dexterity: {type: Number},
+  constitution:{type: Number},
+  intelligence: {type: Number},
+  wisdom: {type: Number},
+  charisma: {type: Number},
+  
 }, {
   timestamps: true
 });

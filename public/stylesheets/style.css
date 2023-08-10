@@ -46,4 +46,11 @@ a {
   width: 50vw;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#newChar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

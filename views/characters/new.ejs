@@ -1,10 +1,10 @@
 <%- include('../partials/header.ejs') %>
 
-  <p>Welcome NEW CHAR<%= title %>
+  <p>NEW CHAR<%= title %>
   </p>
 
 
-  <form action="/characters" method="POST">
+  <form id="newChar" action="/characters" method="POST">
     <label> name
       <input type="string" name="name" placeholder="Character name" required>
     </label>
@@ -24,6 +24,26 @@
         <option value="sorcerer">sorcerer</option>
       </select>
     </label>
+
+    <label> Strength
+      <input type="number" name="strength" min="3" max="15">
+    </label>
+    <label> Dexterity
+      <input type="number" name="dexterity" min="3" max="15">
+    </label>
+    <label> Constitution
+      <input type="number" name="constitution" min="3" max="15">
+    </label>
+    <label> Intelligence
+      <input type="number" name="intelligence" min="3" max="15">
+    </label>
+    <label> Wisdom
+      <input type="number" name="wisdom" min="3" max="15">
+    </label>
+    <label> Charisma
+      <input type="number" name="charisma" min="3" max="15" >
+    </label>
+  
 
 
     <button type="submit">CREATE</button>

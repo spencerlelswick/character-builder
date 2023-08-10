@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+  <p>CHAR PAGE <%= title %>
+  </p>
+
+
+<h2><%- characters.name %></h2>
+<p><%- characters.race %> </p>
+<p><%- characters.charClass %></p>
+
+<p>Strength: <%- characters.strength %></p>
+<p>Dexterity: <%- characters.dexterity %></p>
+<p>Constitution: <%- characters.constitution %></p>
+<p>Intelligence: <%- characters.intelligence %></p>
+<p>Wisdom: <%- characters.wisdom %></p>
+<p>Charisma: <%- characters.charisma %></p>                
+
+
+    
+  <a href="/characters">BACK</a>
+
+
+
+  
+  <%- include('../partials/footer.ejs') %>
