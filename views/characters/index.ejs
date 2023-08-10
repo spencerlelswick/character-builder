@@ -5,13 +5,16 @@
 
   <div id="createArea" >
     <% characters.forEach(char=> { %>
-      <div class="char">
+      <div class="charCard">
         <h2><%- char.name %></h2>
+        <img src="images/<%- char.race %>-<%- char.charClass %>.png">
         <p><%- char.race %> <%- char.charClass %></p>
         <a href="characters/<%- char._id %>">INFO</a>
       </div>
       <% }) %>
+    
         <a class="charBtn" href="characters/new">+</a>
+     
   </div>
 
 
